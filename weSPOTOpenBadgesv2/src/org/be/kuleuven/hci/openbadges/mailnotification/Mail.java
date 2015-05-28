@@ -13,6 +13,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import org.be.kuleuven.hci.openbadges.utils.RestClient;
+import org.be.kuleuven.hci.openbadges.utils.weSPOTBadgesConstants;
 
 import com.google.appengine.labs.repackaged.org.json.JSONException;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
@@ -27,10 +28,10 @@ public class Mail {
 		String urlString = "";
 		if (userId.contains("_")){
 			String[] split = userId.split("_");
-			urlString = "http://inquiry.wespot.net/services/api/rest/json/?method=user.email&api_key=27936b77bcb9bb67df2965c6518f37a77a7ab9f8&offset=10&oauthId="+split[1]+"&oauthProvider="+split[0];
+			urlString = "http://inquiry.wespot.net/services/api/rest/json/?method=user.email&api_key="+weSPOTBadgesConstants.KEYELGG+"&offset=10&oauthId="+split[1]+"&oauthProvider="+split[0];
 		}
 		else{
-			urlString = "http://inquiry.wespot.net/services/api/rest/json/?method=user.email&api_key=27936b77bcb9bb67df2965c6518f37a77a7ab9f8&offset=10&oauthId="+userId+"&oauthProvider=";
+			urlString = "http://inquiry.wespot.net/services/api/rest/json/?method=user.email&api_key="+weSPOTBadgesConstants.KEYELGG+"&offset=10&oauthId="+userId+"&oauthProvider=";
 		}
 		try {
 			JSONObject email = new JSONObject(RestClient.doGet(urlString));

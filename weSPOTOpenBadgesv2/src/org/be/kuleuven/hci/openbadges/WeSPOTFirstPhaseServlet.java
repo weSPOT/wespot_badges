@@ -9,6 +9,7 @@ import org.be.kuleuven.hci.openbadges.model.AwardedBadges;
 import org.be.kuleuven.hci.openbadges.persistanceLayer.OfyService;
 import org.be.kuleuven.hci.openbadges.persistanceLayer.PersistanceLayerAwardedBadges;
 import org.be.kuleuven.hci.openbadges.utils.RestClient;
+import org.be.kuleuven.hci.openbadges.utils.weSPOTBadgesConstants;
 
 import com.google.appengine.labs.repackaged.org.json.JSONArray;
 import com.google.appengine.labs.repackaged.org.json.JSONException;
@@ -19,7 +20,7 @@ public class WeSPOTFirstPhaseServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		try {
-			JSONObject result = new JSONObject(RestClient.doGet("http://inquiry.wespot.net/services/api/rest/json/?method=site.inquiries&api_key=27936b77bcb9bb67df2965c6518f37a77a7ab9f8"));
+			JSONObject result = new JSONObject(RestClient.doGet("http://inquiry.wespot.net/services/api/rest/json/?method=site.inquiries&api_key="+weSPOTBadgesConstants.KEYELGG));
 			JSONArray inquiries_list = result.getJSONArray("result");
 			
 			for (int i =0; i<inquiries_list.length(); i++)

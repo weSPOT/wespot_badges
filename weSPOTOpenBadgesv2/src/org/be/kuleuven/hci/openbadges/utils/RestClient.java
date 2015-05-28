@@ -48,7 +48,7 @@ public class RestClient {
 	        URL url = new URL(urlString);
 	        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 	        connection.setRequestProperty("Content-Type", "application/json");
-	        connection.setRequestProperty("Authorization", "9IywPIjfdlE7gh9T2vj523BTqu2YRkVe");
+	        connection.setRequestProperty("Authorization",weSPOTBadgesConstants.ARLEARNKEY );
 	        connection.setDoOutput(true);
 	        connection.setRequestMethod("GET");
 	        return read(connection.getInputStream());

@@ -75,7 +75,7 @@ public class weSPOTInquiryRules {
 			int number_phases = 6;
 			
 			try {
-				JSONObject phases_object = new JSONObject(RestClient.doGet("http://inquiry.wespot.net/services/api/rest/json/?method=inquiry.phases&api_key=27936b77bcb9bb67df2965c6518f37a77a7ab9f8&inquiry_id="+inquiry));
+				JSONObject phases_object = new JSONObject(RestClient.doGet("http://inquiry.wespot.net/services/api/rest/json/?method=inquiry.phases&api_key="+weSPOTBadgesConstants.KEYELGG+"&inquiry_id="+inquiry));
 				JSONArray phases_array = phases_object.getJSONObject("result").getJSONArray("as_array");
 				number_phases=phases_array.length();
 			} catch (UnsupportedEncodingException e) {

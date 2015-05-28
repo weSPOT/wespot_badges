@@ -19,7 +19,7 @@ public class WeSPOTThirdPhaseServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		try {
-			JSONObject result = new JSONObject(RestClient.doGet("http://inquiry.wespot.net/services/api/rest/json/?method=site.inquiries&api_key=27936b77bcb9bb67df2965c6518f37a77a7ab9f8"));
+			JSONObject result = new JSONObject(RestClient.doGet("http://inquiry.wespot.net/services/api/rest/json/?method=site.inquiries&api_key="+weSPOTBadgesConstants.KEYELGG));
 			JSONArray inquiries_list = result.getJSONArray("result");
 			
 			for (int i =0; i<inquiries_list.length(); i++)
