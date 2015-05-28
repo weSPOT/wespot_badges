@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<cron>
+		<url>/cron/wespotfirstphasebadges</url>
+		<description>First Phase Badges</description>
+		<schedule>every 5 minutes</schedule>
+	</cron>
+	<cron>
+		<url>/cron/wespotsecondphasebadges</url>
+		<description>Second Phase Badges</description>
+		<schedule>every 5 minutes</schedule>
+	</cron>	
+	<cron>
+		<url>/cron/wespotthirdphasebadges</url>
+		<description>Third Phase Badges</description>
+		<schedule>every 5 minutes</schedule>
+	</cron>	
+	<cron>
+		<url>/cron/wespotfourthphasebadges</url>
+		<description>Fourth Phase Badges</description>
+		<schedule>every 5 minutes</schedule>
+	</cron>	
+	<cron>
+		<url>/cron/wespotfifthphasebadges</url>
+		<description>Fifth Phase Badges</description>
+		<schedule>every 5 minutes</schedule>
+	</cron>	
+	<cron>
+		<url>/cron/wespotsixthphasebadges</url>
+		<description>Sixth Phase Badges</description>
+		<schedule>every 5 minutes</schedule>
+	</cron>	
+	<cron>
+		<url>/cron/wespotinquirybadges</url>
+		<description>Inquiry Badges</description>
+		<schedule>every 5 minutes</schedule>
+	</cron>		
+</cronentries>
