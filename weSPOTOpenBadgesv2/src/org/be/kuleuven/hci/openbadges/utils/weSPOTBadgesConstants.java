@@ -6,8 +6,9 @@ public class weSPOTBadgesConstants {
 	public static final String URL_CREATEBADGES = URL_OPENBADGESAPI+"/rest/badges";
 	public static final String BADGESINCACHE = "awardedbadges";
 	public static final String NAMEAPP = "wespot_automatic_badges";
-	public static final String KEYOPENBADGES = "{openbadges}"; //App Engine key
-	public static final String KEYELGG = "{keyelgg}"; //ELGG Api Key
+	public static final String KEYOPENBADGES = "{key}"; //App Engine key
+	public static final String KEYELGG = "{key}"; //ELGG Api Key
+	public static final String ARLEARNKEY = "{key}"; //ARLEARN key
 	//public static final String KEYOPENBADGES = "oolktt4imuci897pjpvsha9fds"; //Localhost key
 	//===================PEERS AND NUMBER CONTRIBUTIONS===========================
 	
