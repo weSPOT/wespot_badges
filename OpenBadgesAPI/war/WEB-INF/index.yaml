@@ -1,0 +1,23 @@
+indexes:
+
+- kind: Badge
+  ancestor: no
+  properties:
+  - name: id
+    direction: desc
+  - name: context
+  - name: keyapp
+
+- kind: Badge
+  ancestor: no
+  properties:
+  - name: id
+    direction: desc
+  - name: keyapp
+
+- kind: Badge
+  ancestor: no
+  properties:
+  - name: context
+    direction: desc
+  - name: keyapp
