@@ -14,8 +14,8 @@ Open Badge API is a set of REST services that can be used to store badges follow
 Explanation per package:
   - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/): Contains servlets. These servlets are used [jsp files](/war/) that contain forms. These JSP files are developed specially for weSPOT and facilitate the creation, award and copy of manual badges between inquiries.   
   - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/badgestore/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/badgestore/): Contains servlets to enable the creation of badges and the storage of the image in the data store. It uses the [BlobstoreService](https://cloud.google.com/appengine/docs/java/javadoc/com/google/appengine/api/blobstore/BlobstoreService) to store the image in the database. 
-  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
-  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/mailnotification] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/mailnotification) contains classes to send emails as notifications. 
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/model] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/model) contains four classes. An AuthorizedKey is created per consumer/provider of badges. The three other classes correspond to the Open Badge specification. Issuer is the part that defines the institution that issues the badge. Badge contains the definition of the badge itself. AwardedBadge contains the information of the user who is awared with the Badge. 
   - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
   - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
   - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
