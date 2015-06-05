@@ -10,3 +10,12 @@ Both components are deployable in [Google APP Engine](https://appengine.google.c
 1. Open Badge API
 
 Open Badge API is a set of REST services that can be used to store badges following the Open Badges specification. The services are described [here](http://wespot.net/apis/-/asset_publisher/84uK/wiki/id/21038428?redirect=http%3A%2F%2Fwespot.net%2Fapis%3Fp_p_id%3D101_INSTANCE_84uK%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D1).
+
+Explanation per package:
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/): Contains servlets. These servlets are used [jsp files](/war/) that contain forms. These JSP files are developed specially for weSPOT and facilitate the creation, award and copy of manual badges between inquiries.   
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/badgestore/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/badgestore/): Contains servlets to enable the creation of badges and the storage of the image in the data store. It uses the [BlobstoreService](https://cloud.google.com/appengine/docs/java/javadoc/com/google/appengine/api/blobstore/BlobstoreService) to store the image in the database. 
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
+  - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/)
