@@ -20,7 +20,7 @@ Description per package:
   - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/services] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/services): implements the REST services described [earlier](http://wespot.net/apis/-/asset_publisher/84uK/wiki/id/21038428?redirect=http%3A%2F%2Fwespot.net%2Fapis%3Fp_p_id%3D101_INSTANCE_84uK%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D1). 
   - [OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/utils] (/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/utils): Miscellaneous package that contains classes to manipulate JSON or that implements a HTTP Client. 
 
-2. WeSPOT rules
+ 2. WeSPOT rules
 
 weSPOT Rules is a weSPOT specific component. It contains the rules described in [D3.3](wespot.net/en/public-deliverables). 
 
