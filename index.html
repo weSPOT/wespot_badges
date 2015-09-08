@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Wespot badges by weSPOT</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="without-description">
+        <h1>Wespot badges</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/weSPOT/wespot_badges">View the Project on GitHub <small>weSPOT/wespot_badges</small></a></p>
+        <ul>
+          <li><a href="https://github.com/weSPOT/wespot_badges/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/weSPOT/wespot_badges/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/weSPOT/wespot_badges">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="wespot-badges" class="anchor" href="#wespot-badges" aria-hidden="true"><span class="octicon octicon-link"></span></a>WeSPOT Badges</h1>
+
+<p>Two components are part of the weSPOT Badges system (fully described in <a href="wespot.net/en/public-deliverables">D3.3</a>):</p>
+
+<ul>
+<li><a href="/OpenBadgesAPI">Open Badge API</a></li>
+<li><a href="/weSPOTOpenBadgesv2">WeSPOT rules</a></li>
+</ul>
+
+<p>We recommend the read of <a href="wespot.net/en/public-deliverables">D3.3</a> before you continue reading this document... </p>
+
+<p>Both components are deployable in <a href="https://appengine.google.com/">Google APP Engine</a>.</p>
+
+<h2>
+<a id="open-badge-api" class="anchor" href="#open-badge-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Open Badge API</h2>
+
+<p>Open Badge API is a set of REST services that can be used to store badges following the Open Badges specification. The services are described <a href="http://wespot.net/apis/-/asset_publisher/84uK/wiki/id/21038428?redirect=http%3A%2F%2Fwespot.net%2Fapis%3Fp_p_id%3D101_INSTANCE_84uK%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D1">here</a>.</p>
+
+<p>Description per package:</p>
+
+<ul>
+<li>
+<a href="/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/">OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/</a>: Contains servlets. These servlets are used <a href="/war/">jsp files</a> that contain forms. These JSP files are developed specially for weSPOT and facilitate the creation, award and copy of manual badges between inquiries.<br>
+</li>
+<li>
+<a href="/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/badgestore/">OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/badgestore/</a>: Contains servlets to enable the creation of badges and the storage of the image in the data store. It uses the <a href="https://cloud.google.com/appengine/docs/java/javadoc/com/google/appengine/api/blobstore/BlobstoreService">BlobstoreService</a> to store the image in the database. </li>
+<li>
+<a href="/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/mailnotification">OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/mailnotification</a> contains classes to send emails as notifications. </li>
+<li>
+<a href="/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/model">OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/model</a> contains four classes. An AuthorizedKey is created per consumer/provider of badges. The three other classes correspond to the Open Badge specification. Issuer is the part that defines the institution that issues the badge. Badge contains the definition of the badge itself. AwardedBadge contains the information of the user who is awared with the Badge. </li>
+<li>
+<a href="/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/persistanceLayer">OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/persistanceLayer</a>: contains the classes to make our model persistant.</li>
+<li>
+<a href="/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/services">OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/services</a>: implements the REST services described <a href="http://wespot.net/apis/-/asset_publisher/84uK/wiki/id/21038428?redirect=http%3A%2F%2Fwespot.net%2Fapis%3Fp_p_id%3D101_INSTANCE_84uK%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-2%26p_p_col_count%3D1">earlier</a>. </li>
+<li>
+<a href="/OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/utils">OpenBadgesAPI/src/org/be/kuleuven/hci/openbadges/utils</a>: Miscellaneous package that contains classes to manipulate JSON or that implements a HTTP Client. </li>
+</ul>
+
+<h2>
+<a id="wespot-rules" class="anchor" href="#wespot-rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>WeSPOT rules</h2>
+
+<p>weSPOT Rules is a weSPOT specific component. It contains the rules described in <a href="wespot.net/en/public-deliverables">D3.3</a>. </p>
+
+<p>Description per package:</p>
+
+<ul>
+<li>
+<a href="/weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/rules/">weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/rules/</a>: Contains the rules per phases and the whole inquiry.</li>
+<li>
+<a href="/weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/model/">weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/model</a>: contains the model (the same than for our earlier component).</li>
+<li>
+<a href="/weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/badges/">weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/badges</a>: contains the classes to create all the badge of the inquiry.</li>
+<li>
+<a href="/weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/mailnotification/">weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/mailnotification</a>: Contains the classes to send emails as notifications. For example, every time that a badge is awarded the user will get an email.</li>
+<li>
+<a href="/weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/services">weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/services</a>: contains the REST services to create all the different badges. This service is called, in weSPOT, from our Inquiry Workflow Engine (more information in <a href="wespot.net/en/public-deliverables">D3.3</a>). </li>
+<li>
+<a href="/weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/utils">weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/utils</a>: Miscellaneous package that contains classes to manipulate JSON or that implements a HTTP Client. </li>
+<li>
+<a href="/weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/">weSPOTOpenBadgesv2/src/org/be/kuleuven/hci/openbadges/awardingbadges/</a>: Contains the servlets (cron jobs described in the <a href="https://github.com/weSPOT/wespot_badges/blob/master/weSPOTOpenBadgesv2/war/WEB-INF/cron.xml">cron.xml</a> file) that evaluate the rules per phase and inquiry. The events are retrieved from the data store. The data store is available <a href="https://github.com/svencharleer/datastore">here</a>.</li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/weSPOT">weSPOT</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
